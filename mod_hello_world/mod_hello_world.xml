@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="module" version="5.0" client="site" method="upgrade">
+    <name>Módulo Hello World</name>
+    <author>João Paulo</author>
+    <authorEmail>emailparaojp@gmail.com</authorEmail>
+    <creationDate>01/11/2023</creationDate>
+    <version>1.0.0</version>
+    <description>Este módulo exibe um Hello World</description>
+    <files>
+        <filename module="mod_hello_world">helper.php</filename>
+        <filename>tmpl/default.php</filename>
+        <folder>tmpl</folder>
+        <filename>mod_hello_world.php</filename>
+    </files>
+    <config>
+        <fields name="params">
+            <fieldset name="basic" label="Basic">
+                <field name="textoModulo" type="editor" filter="safehtml" />
+            </fieldset>
+        </fields>
+    </config>
+</extension>

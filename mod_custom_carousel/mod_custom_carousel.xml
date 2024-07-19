@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="module" version="5.0" client="site" method="upgrade">
+    <name>Módulo Carousel</name>
+    <author>João Paulo</author>
+    <authorEmail>emailparaojp@gmail.com</authorEmail>
+    <creationDate>18/07/2024</creationDate>
+    <version>1.0.0</version>
+    <description>Este módulo exibe um Carousel</description>
+    <files>
+        <filename module="mod_custom_carousel">helper.php</filename>
+        <filename>tmpl/default.php</filename>
+        <folder>tmpl</folder>
+        <filename>mod_custom_carousel.php</filename>
+    </files>
+    <config>
+        <fields name="params">
+            <fieldset name="basic" label="Basic">
+                <field name="items" type="subform" label="Itens" multiple="true">
+                    <form>
+                        <subfields>
+                            <field name="title" type="text" label="Titulo" />
+                            <field name="image" type="media" label="Imagem"/>
+                            <field name="description" type="textarea" label="Descrição" />
+                            <field name="highlight" type="radio" label="Destaque?" default="0">
+                                <option value="1">Sim</option>
+                                <option value="0">Não</option>
+                            </field>
+                        </subfields>
+                    </form>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>
