@@ -11,7 +11,7 @@ Aqui estão os módulos Joomla disponíveis neste repositório:
 - [Joomla! 1 - Instalaçaõ](https://youtu.be/naFc8iI4_Os?si=1UhWuXCOf7aaiyGK)
 - [Joomla! 2 - Criaçaõ de modulo e instalação de plugins básicos](https://youtu.be/tLdrCCuh4Xs?si=IRjc_Ba0bmAeebUc)
 - [Joomla! 3 - Criar/alterar posição de modulo / criar menu / entender personalização](https://youtu.be/flCttAFCeG4?si=_QwWeugbS6OONcAu)
-- [Joomla! 4 - Criar um bootstrap Carousel](#)
+- [Joomla! 4 - Criar um bootstrap Carousel](https://youtu.be/J7XZsIg9v2A)
 
 ## Como Usar
 
