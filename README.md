@@ -35,4 +35,54 @@ Este projeto é de uso livre.
 
 ---
 
+# Explicação sobre os arquivos dos módulos (exemplo do módulo custom_carousel)
+
+## mod_custom_carousel.xml
+
+**Propósito:**
+Este é o arquivo de manifesto XML que define o módulo. Ele informa ao Joomla sobre o módulo, descrevendo os arquivos incluídos, os parâmetros de configuração e outros metadados necessários para a instalação e operação do módulo.
+
+**Funções:**
+- Define o nome, autor, versão e descrição do módulo.
+- Lista os arquivos que compõem o módulo.
+- Define os parâmetros configuráveis do módulo, como os itens do carousel e se eles são ou não destacados.
+
+## mod_custom_carousel.php
+
+**Propósito:**
+Este é o arquivo principal do módulo. Ele serve como o ponto de entrada para o módulo quando o Joomla renderiza a página.
+
+**Funções:**
+- Inclui o `helper.php` para utilizar funções auxiliares.
+- Obtém os itens do carousel filtrados usando a função do helper.
+- Carrega o layout definido em `tmpl/default.php` para renderizar a saída do módulo.
+
+## helper.php
+
+**Propósito:**
+Este arquivo contém funções auxiliares que ajudam a processar os dados do módulo. Ele é utilizado para separar a lógica de negócios da lógica de apresentação, mantendo o código mais organizado e modular.
+
+**Funções:**
+- Filtrar os itens do carousel para exibir apenas aqueles que estão setados como destaque.
+
+## tmpl/default.php
+
+**Propósito:**
+Este arquivo define a apresentação do módulo, ou seja, a marcação HTML que será gerada e enviada ao navegador. Ele usa os dados processados pelo `mod_custom_carousel.php` e pelo `helper.php` para renderizar o carousel.
+
+**Funções:**
+- Adiciona as dependências do Bootstrap (CSS e JS).
+- Gera a estrutura HTML do Bootstrap Carousel, iterando sobre os itens filtrados para criar os slides do carousel.
+
+Cada um desses arquivos desempenha um papel crucial na criação de um módulo Joomla funcional e bem estruturado, garantindo que a lógica e a apresentação do módulo estejam separadas e que os administradores do site possam configurar o módulo conforme necessário.
+
+**Adicionando CSS ou JS Personalizado:**
+Para adicionar um arquivo CSS ou JS personalizado, você pode utilizar as funções do Joomla no `mod_custom_carousel.php`:
+
+```php
+$document = JFactory::getDocument();
+$document->addStyleSheet(JURI::base() . 'modules/mod_custom_carousel/css/custom.css');
+$document->addScript(JURI::base() . 'modules/mod_custom_carousel/js/custom.js');
+Coloque estas linhas no início do mod_custom_carousel.php para incluir arquivos CSS e JS adicionais.
+
 **Obrigado por apoiar o canal Desenvolvimento Web DF!**
